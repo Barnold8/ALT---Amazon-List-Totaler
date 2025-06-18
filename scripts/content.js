@@ -44,7 +44,31 @@ function insertPriceTotal(){
   }
 }
 
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
 
-insertPriceTotal()
+function addAllItemsToBasket(){
 
+  basketButtons = document.querySelectorAll("[data-action=\"add-to-cart\"]")
+  delayTime = 1000 // time for delay in ms
+ 
+  for(let i = 0; i < basketButtons.length; i++){ // no for each here, nodelist is weird
 
+    buttonLink = ""
+    buttonLinkCollection = basketButtons.item(i).getElementsByClassName("a-button-text") // indexing a nodelist in a jank way because... ✨ javascript ✨
+
+    if(buttonLinkCollection.length >= 1){
+      wait(delayTime)
+      console.log(buttonLinkCollection[0])
+      buttonLinkCollection[0].click()
+    }
+
+  }
+}
+
+addAllItemsToBasket()
