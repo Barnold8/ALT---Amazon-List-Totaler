@@ -71,4 +71,26 @@ function addAllItemsToBasket(){
   }
 }
 
+
+function generateAddAllButton(){
+
+  classes = ["a-button", "a-button-normal", "a-button-primary", "a-button-icon", "wl-info-aa_add_to_cart"]
+  addButton = document.createElement("button")
+
+  classes.forEach(style => {
+    addButton.classList.add(style)
+  })
+
+  addButton.addEventListener("click", addAllItemsToBasket)
+  addButton.appendChild(document.createTextNode("Add All Items To Basket"))
+  
+  itemList = document.querySelectorAll('[id="item-page-wrapper"]');
+  if(itemList.length >=1){
+    itemList[0].appendChild(addButton)
+  }
+
+}
+
+
 insertPriceTotal()
+generateAddAllButton()
