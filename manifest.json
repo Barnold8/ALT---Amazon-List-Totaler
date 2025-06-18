@@ -5,7 +5,7 @@
     "manifest_version": 3,
     "content_scripts": [
         {
-          "matches": [],
+          "matches": ["https://www.amazon.co.uk/*"],
           "js": ["scripts/content.js"]
         }
       ]
