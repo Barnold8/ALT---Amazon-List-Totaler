@@ -1,0 +1,13 @@
+{
+    "name": "ALT - Amazon List Totaler",
+    "description": "Compiles a given user defined list's items into a sub total",
+    "version": "0.1",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+          "matches": [],
+          "js": ["scripts/content.js"]
+        }
+      ]
+  }
+
