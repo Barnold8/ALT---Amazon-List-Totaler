@@ -18,11 +18,11 @@ function getPriceTotal(){
     fraction = item.getElementsByClassName("a-price-fraction")
     if(whole.length >=1 && fraction.length >=1){
       price = `${whole[0].innerText}${fraction[0].innerText}`
-      price = parseFloat(price);
+      price = parseFloat(price)
       runningTotal += price
     }
   }
-  return `Item list total: ${priceSymbol}${runningTotal}`
+  return `Item list total: ${priceSymbol}${runningTotal.toFixed(2)}`
   
 }
 
@@ -70,10 +70,9 @@ function addAllItemsToBasket(){
   }
 }
 
-
 function generateAddAllButton(){
 
-  classes = ["a-button", "a-button-normal", "a-button-primary", "a-button-icon", "wl-info-aa_add_to_cart"]
+  classes = ["a-button", "a-button-normal", "a-button-primary", "a-button-icon", "wl-info-aa_add_to_cart","a-button-text", "a-text-center"]
   addButton = document.createElement("button")
 
   classes.forEach(style => {
