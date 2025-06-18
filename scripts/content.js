@@ -1,4 +1,4 @@
-function getPrices(){
+function getPriceTotal(){
 
   priceElements = document.getElementsByClassName("price-section")
   priceSymbol = "?"
@@ -22,9 +22,29 @@ function getPrices(){
       runningTotal += price
     }
   }
-  return `${priceSymbol}${runningTotal}`
+  return `Item list total: ${priceSymbol}${runningTotal}`
   
 }
 
+function generateTotalElement(total){
+  priceElement = document.createElement("p")
+  priceElement.classList.add("a-size-medium")
+  priceElement.classList.add("a-text-bold")
+  priceElement.appendChild(document.createTextNode(total));
+  return priceElement
+}
+
+function insertPriceTotal(){
+
+  price = getPriceTotal()
+  priceItem = generateTotalElement(price)
+  itemList = document.querySelectorAll('[id="item-page-wrapper"]');
+  if(itemList.length >=1){
+    itemList[0].appendChild(priceItem)
+  }
+}
+
+
+insertPriceTotal()
 
 
