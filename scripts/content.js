@@ -55,7 +55,7 @@ function wait(ms){
 function addAllItemsToBasket(){
 
   basketButtons = document.querySelectorAll("[data-action=\"add-to-cart\"]")
-  delayTime = 1000 // time for delay in ms
+  delayTime = 1000 * 0.25 // time for delay in ms 
  
   for(let i = 0; i < basketButtons.length; i++){ // no for each here, nodelist is weird
 
@@ -64,7 +64,6 @@ function addAllItemsToBasket(){
 
     if(buttonLinkCollection.length >= 1){
       wait(delayTime)
-      console.log(buttonLinkCollection[0])
       buttonLinkCollection[0].click()
     }
 
