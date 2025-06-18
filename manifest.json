@@ -5,7 +5,32 @@
     "manifest_version": 3,
     "content_scripts": [
         {
-          "matches": ["https://www.amazon.co.uk/*"],
+          "matches": [
+        "https://www.amazon.com/*/hz/wishlist/ls/*",
+        "https://www.amazon.co.uk/*/hz/wishlist/ls/*",
+        "https://www.amazon.de/*/hz/wishlist/ls/*",
+        "https://www.amazon.ca/*/hz/wishlist/ls/*",
+        "https://www.amazon.fr/*/hz/wishlist/ls/*",
+        "https://www.amazon.it/*/hz/wishlist/ls/*",
+        "https://www.amazon.es/*/hz/wishlist/ls/*",
+        "https://www.amazon.co.jp/*/hz/wishlist/ls/*",
+        "https://www.amazon.cn/*/hz/wishlist/ls/*",
+        "https://www.amazon.in/*/hz/wishlist/ls/*",
+        "https://www.amazon.com.au/*/hz/wishlist/ls/*",
+        "https://www.amazon.com.br/*/hz/wishlist/ls/*",
+        "https://www.amazon.com.mx/*/hz/wishlist/ls/*",
+        "https://www.amazon.ae/*/hz/wishlist/ls/*",
+        "https://www.amazon.sg/*/hz/wishlist/ls/*",
+        "https://www.amazon.nl/*/hz/wishlist/ls/*",
+        "https://www.amazon.se/*/hz/wishlist/ls/*",
+        "https://www.amazon.pl/*/hz/wishlist/ls/*",
+        "https://www.amazon.com.tr/*/hz/wishlist/ls/*",
+        "https://www.amazon.sa/*/hz/wishlist/ls/*",
+        "https://www.amazon.eg/*/hz/wishlist/ls/*",
+        "https://www.amazon.co.za/*/hz/wishlist/ls/*",
+        "https://www.amazon.com.be/*/hz/wishlist/ls/*",
+        "https://www.amazon.ie/*/hz/wishlist/ls/*"
+        ],
           "js": ["scripts/content.js"]
         }
       ]
